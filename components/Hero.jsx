@@ -5,18 +5,17 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <Fragment>
-      <div className="relative h-[88vh] overflow-hidden">
-        <div className="absolute inset-0 z-20 aspect-video object-cover">
+      <div className="relative h-[91vh] overflow-hidden">
+        <div className="absolute inset-0 z-20  object-cover">
           <Image
             src="/images/bg.jpg"
             alt="skin care"
-            className="aspect-video h-full object-cover"
-            width={1920}
-            height={1280}
+            className="min-h-[88vh] object-cover"
+            layout="fill"
           />
         </div>
         <div className="absolute inset-0 z-40 bg-gray-900 bg-opacity-50 flex flex-col space-y-4 justify-center items-center">
-          <h1 className="font-bold text-white text-xl md:text-4xl lg:text-6xl mb-4">
+          <h1 className="font-bold text-white text-3xl md:text-4xl lg:text-6xl mb-4">
             Love Thy Self
           </h1>
           <Link href="/about" passHref>
