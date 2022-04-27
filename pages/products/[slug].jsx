@@ -55,6 +55,10 @@ const Product = ({ product }) => {
             <p className="text-xs leading-normal text-gray-600 mt-6 xl:mt-10">
               <span>Directions:</span> {product.directions}
             </p>
+
+ <p className="text-xs leading-normal text-gray-600 mt-6 xl:mt-10">
+              <span>Directions:</span> {product.disclaimer}
+            </p>
           </div>
         </div>
       </div>
