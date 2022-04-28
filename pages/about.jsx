@@ -76,7 +76,7 @@ const About = () => {
           <div className="rounded overflow-hidden shadow-md">
             <div className="object-cover overflow-hidden rounded-lg h-[90vh] md:h-full">
               <Image
-                src="/images/yoni.jpg"
+                src="/images/about.jpg"
                 width={1280}
                 height={1920}
                 alt="skin care"
