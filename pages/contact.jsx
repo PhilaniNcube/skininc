@@ -37,7 +37,7 @@ const contact = () => {
               <form>
                 <textarea
                   name="description"
-                  className="w-full rounded text-sm p-2"
+                  className="w-full rounded text-sm text-slate-400 p-2"
                   placeholder="Message"
                   rows="3"
                 ></textarea>

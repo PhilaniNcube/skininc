@@ -19,7 +19,7 @@ const About = () => {
               beauty essentials made from the finest sourced chemical free raw
               materials which have amazing healing and restoring properties. My
               business started 2 years ago when I got pregnant with my son. I
-              was looking from natural products for my stretch marks developed
+              was looking for natural products for my stretch marks developed
               during the pregnancy period. The battle to find organic products
               to use during this period spured me to do extensive research and I
               started developing my own products based on the fact that most
@@ -42,7 +42,7 @@ const About = () => {
                   people by providing safe and effective skin care products. We
                   strive to provide natural solutions to help improve quality of
                   life and provide organic ways in which to upgrade your
-                  self-care routine
+                  self-care routine.
                 </p>
               </div>
             </div>
@@ -52,8 +52,8 @@ const About = () => {
                 <h3 className="text-lg text-sky-500 uppercase">Goals</h3>
                 <ul className="text-sm text-gray-700">
                   <li>Expand brand awareness.</li>
-                  <li>Create employment opportunities</li>
-                  <li>Provide environmentally friendly organic products</li>
+                  <li>Create employment opportunities.</li>
+                  <li>Provide environmentally friendly organic products.</li>
                   <li>Create a solid client base.</li>
                   <li>
                     Be recognised for the quality and effectiveness of our
