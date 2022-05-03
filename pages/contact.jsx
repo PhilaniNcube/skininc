@@ -7,9 +7,9 @@ const contact = () => {
       <div className="relative min-h-[120vh] overflow-hidden py-6">
         <div className="absolute inset-0 z-20 aspect-video object-cover">
           <Image
-            src="/images/face.jpg"
+            src="/images/rose.webp"
             alt="skin care"
-            className="aspect-video h-full object-cover object-bottom"
+            className="aspect-video h-full object-cover object-center"
             width={1920}
             height={1280}
           />
