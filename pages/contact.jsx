@@ -34,13 +34,23 @@ const contact = () => {
                 Tiktok @skininc1988 <br />
                 IG skininc1988
               </p>
-              <form>
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value={process.env.NEXT_PUBLIC_WEBFORMS_KEY}
+                ></input>
                 <textarea
                   name="description"
                   className="w-full rounded text-sm text-slate-400 p-2"
                   placeholder="Message"
                   rows="3"
                 ></textarea>
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://web3forms.com/success"
+                ></input>
                 <button className="bg-sky-800 text-base px-6 py-2 rounded-md">
                   Submit
                 </button>
