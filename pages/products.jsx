@@ -3,7 +3,10 @@ import React, { Fragment } from 'react';
 import Link from 'next/link';
 import supabase from '../utils/supabase';
 
-const services = ({ products }) => {
+const ProductPage = ({ products }) => {
+
+  console.log(products)
+
   return (
     <Fragment>
       <div className="bg-gradient-to-r from-pink-300 to-sky-300 min-h[30vh]">
@@ -27,7 +30,7 @@ const services = ({ products }) => {
             {products.map((product) => (
               <Link
                 key={product.id}
-                href={`/products/${product.slug}`}
+                href={`/products/${product.id}`}
                 passHref
               >
                 <div className="group">
@@ -35,7 +38,7 @@ const services = ({ products }) => {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-center object-cover group-hover:opacity-75"
+                      className="w-full h-64 object-center object-cover group-hover:opacity-75"
                     />
                   </div>
                   <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
@@ -52,17 +55,17 @@ const services = ({ products }) => {
   );
 };
 
-export default services;
+export default ProductPage;
 
 export async function getServerSideProps() {
-  let { data: skinproducts, error } = await supabase
-    .from('skinproducts')
-    .select('*')
-    .order('name', { ascending: true });
+  let { data: products, error } = await supabase
+    .from("products")
+    .select("*")
+    .order("name", { ascending: true });
 
   return {
     props: {
-      products: skinproducts,
+      products: products,
     },
   };
 }

@@ -52,15 +52,15 @@ const Navbar = () => {
                 About Us
               </a>
             </Link>{' '}
-            <Link href="/services">
+            <Link href="/products">
               <a
                 className={
-                  router.asPath === '/services'
+                  router.asPath === '/products'
                     ? 'border-b-2 border-gray-700 text-white text-base'
                     : 'text-white text-base'
                 }
               >
-                Services
+                Products
               </a>
             </Link>
             <Link href="/contact">
