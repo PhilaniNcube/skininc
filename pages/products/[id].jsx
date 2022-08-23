@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import supabase from '../../utils/supabase';
 
-const Product = ({ product }) => {
-  console.log(product);
-
+const Product = ({ product, relatedProducts }) => {
+  console.log({product, relatedProducts});
   return (
     <Fragment>
       <div className="max-w-6xl mx-auto mt-4">
@@ -19,8 +18,8 @@ const Product = ({ product }) => {
           </div>
           <div className="md:w-2/3 mt-7 md:mt-0 flex  md:px-6 xl:px-8  2xl:justify-between items-start flex-col md:py-12">
             <div className="flex w-full justify-between items-center">
-              <p className="text-xl xl:text-2xl font-medium leading-5 xl:leading-normal text-gray-800">
-                Name: {product.name}
+              <p className="text-xl xl:text-2xl font-medium text-gray-600">
+                {product.name}
               </p>
             </div>
             <div className="flex w-full justify-between items-center mt-6 xl:mt-8">
@@ -30,22 +29,9 @@ const Product = ({ product }) => {
                 </p>
               </div>
             </div>
-            <div className="xl:mt-10 mt-8 flex justify-start items-start flex-col space-y-5">
-              <p className="text-lg xl:text-xl font-medium leading-none xl:leading-5 text-center text-gray-800">
-                {product.dimensions} ml
-              </p>
-            </div>
+            <div className="xl:mt-10 mt-8 flex justify-start items-start flex-col space-y-5"></div>
 
             <div className="xl:mt-10 mt-6 flex justify-center items-center w-full xl:flex-row flex-col space-y-4 xl:space-y-0 xl:space-x-8"></div>
-            <p className="text-base leading-normal text-gray-600 mt-6 xl:mt-10">
-              Description: {product.description}
-            </p>
-            <p className="text-xs leading-normal text-gray-600 mt-6 xl:mt-10">
-              <span>Ingredients:</span> {product.ingredients}
-            </p>
-            <p className="text-xs leading-normal text-gray-600 mt-6 xl:mt-10">
-              <span>Directions:</span> {product.directions}
-            </p>
 
             <Link
               href={`https://wa.me/27683332924?text=I%20am%20looking%20to%20buy%20${product.name}`}
@@ -54,6 +40,20 @@ const Product = ({ product }) => {
                 Buy
               </a>
             </Link>
+
+            <p className="mt-8 text-gray-700">Related Products</p>
+            <div className="grid mt-2 grid-cols-1 md:grid-cols-2 gap-4">
+              {relatedProducts.map((item) => (
+                <div key={item.id} className="w-full">
+                  <img
+                    className="w-full aspect-square rounded-lg mb-2 object-cover"
+                    src={item.image}
+                    alt={item.name}
+                  />
+                  <p className="text-xs text-gray-600 font-medium">{item.name} R{item.price}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -65,19 +65,22 @@ export default Product;
 
 export async function getServerSideProps({ params: { id } }) {
 
-  console.log({id})
+
 
   let { data, error } = await supabase
-    .from('products')
+    .from('collections')
     .select('*')
     .eq('id', id)
     .single();
 
-    console.log(data)
+let relatedProducts = await supabase.from('skinproducts').select('*').eq('collection', id)
+
+
 
   return {
     props: {
       product: data,
+      relatedProducts: relatedProducts.data
     },
   };
 }

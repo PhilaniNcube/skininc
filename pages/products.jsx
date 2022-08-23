@@ -58,14 +58,14 @@ const ProductPage = ({ products }) => {
 export default ProductPage;
 
 export async function getServerSideProps() {
-  let { data: products, error } = await supabase
-    .from("products")
+  let { data: collections, error } = await supabase
+    .from("collections")
     .select("*")
     .order("name", { ascending: true });
 
   return {
     props: {
-      products: products,
+      products: collections,
     },
   };
 }
