@@ -14,22 +14,20 @@ const About = () => {
               About Us
             </h1>
             <p className="text-sm md:text-base text-gray-700 my-4">
-              SKIN INC. is a unisex online skin care shop which specializes in
-              organic handcrafted cosmetics and feminine products. Skin and
-              beauty essentials made from the finest sourced chemical free raw
-              materials which have amazing healing and restoring properties. My
-              business started 2 years ago when I got pregnant with my son. I
-              was looking for natural products for my stretch marks developed
-              during the pregnancy period. The battle to find organic products
-              to use during this period spured me to do extensive research and I
-              started developing my own products based on the fact that most
-              products on the market were not 100% natural or organic. My
-              products that I developed and manufactured produced remarkable
-              results, I used the same products on my son when he was born. My
-              son suffered from eczema,which I treated successfully with my
-              products. Long story short,my cloud turned to a silver lining. A
-              skin care business has been born and we are excited with the
-              growth of Skin Inc.
+              SKIN INC. is a unisex online skincare and libido enhancing store
+              which specializes in organic hand-crafted cosmetics, feminine
+              care, and libido essentials. Our products are made from the finest
+              sourced, paraben free raw materials, essential oils and herbs with
+              amazing healing, restoration, and enhancement properties. My
+              journey started 2 years ago when I decided to investigate ways to
+              amplify my quality of life, which spurred me into extensive
+              research on formulating and manufacturing. This eventually led to
+              me developing my very own range of products. Trailing my products
+              with family, friends and colleagues produced remarkable results
+              and this propelled me into the direction of starting my own
+              business to share my findings. Long story short my cloud turned to
+              a silver lining and SKIN INC was born. We are elated with the
+              growth of SKIN INC and hope that you would join us on our journey.
             </p>
             <div className="grid grid-cols-12 gap-3">
               <BiRocket className="text-sky-500 place-self-start text-3xl" />
@@ -39,10 +37,10 @@ const About = () => {
                 </h3>
                 <p className="text-sm text-gray-700">
                   Our mission is to make a positive difference in the lives of
-                  people by providing safe and effective skin care products. We
-                  strive to provide natural solutions to help improve quality of
-                  life and provide organic ways in which to upgrade your
-                  self-care routine.
+                  people by providing safe and effective skin care, feminine and
+                  libido products. We strive to provide natural solutions to
+                  help improve quality of life and provide organic ways in which
+                  to upgrade your self-care routine.
                 </p>
               </div>
             </div>

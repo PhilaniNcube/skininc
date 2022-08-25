@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
-import React, { Fragment, useEffect, useState } from 'react';
-import supabase from '../../utils/supabase';
+import Link from "next/link";
+import React, { Fragment, useEffect, useState } from "react";
+import supabase from "../../utils/supabase";
 
-const Product = ({ product, relatedProducts }) => {
-  console.log({product, relatedProducts});
+const Product = ({ product }) => {
+  console.log({ product });
   return (
     <Fragment>
       <div className="max-w-6xl mx-auto mt-4">
@@ -31,7 +31,15 @@ const Product = ({ product, relatedProducts }) => {
             </div>
             <div className="xl:mt-10 mt-8 flex justify-start items-start flex-col space-y-5"></div>
 
-            <div className="xl:mt-10 mt-6 flex justify-center items-center w-full xl:flex-row flex-col space-y-4 xl:space-y-0 xl:space-x-8"></div>
+            <div className="xl:mt-4 flex justify-center items-center w-full xl:flex-row flex-col space-y-4 xl:space-y-0 xl:space-x-8">
+            <p className="text-sm text-gray-600"> <span className="font-bold">Description:</span> {product.description}</p>
+            </div>
+            <div className="xl:mt-4 flex justify-center items-center w-full xl:flex-row flex-col space-y-4 xl:space-y-0 xl:space-x-8">
+            <p className="text-sm text-gray-600"> <span className="font-bold">Ingredients:</span> {product.ingredients}</p>
+            </div>
+            <div className="xl:mt-4 flex justify-center items-center w-full xl:flex-row flex-col space-y-4 xl:space-y-0 xl:space-x-8">
+            <p className="text-sm text-gray-600"> <span className="font-bold">Directions:</span> {product.directions}</p>
+            </div>
 
             <Link
               href={`https://wa.me/27683332924?text=I%20am%20looking%20to%20buy%20${product.name}`}
@@ -41,19 +49,7 @@ const Product = ({ product, relatedProducts }) => {
               </a>
             </Link>
 
-            <p className="mt-8 text-gray-700">Related Products</p>
-            <div className="grid mt-2 grid-cols-1 md:grid-cols-2 gap-4">
-              {relatedProducts.map((item) => (
-                <div key={item.id} className="w-full">
-                  <img
-                    className="w-full aspect-square rounded-lg mb-2 object-cover"
-                    src={item.image}
-                    alt={item.name}
-                  />
-                  <p className="text-xs text-gray-600 font-medium">{item.name} R{item.price}</p>
-                </div>
-              ))}
-            </div>
+
           </div>
         </div>
       </div>
@@ -64,23 +60,18 @@ const Product = ({ product, relatedProducts }) => {
 export default Product;
 
 export async function getServerSideProps({ params: { id } }) {
-
-
-
   let { data, error } = await supabase
-    .from('collections')
-    .select('*')
-    .eq('id', id)
+    .from("skinproducts")
+    .select("*")
+    .eq("id", id)
     .single();
-
-let relatedProducts = await supabase.from('skinproducts').select('*').eq('collection', id)
 
 
 
   return {
     props: {
       product: data,
-      relatedProducts: relatedProducts.data
+
     },
   };
 }

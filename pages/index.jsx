@@ -10,9 +10,7 @@ export default function Home() {
         <title>Skin Inc</title>
         <meta
           name="description"
-          content="Skin Inc is a South African based business , owned by Stacey-Lee Arends. We are an
-                  online unisex skin care shop. Our products are pure organic, plant based which is
-                  not only great for your skin but also for the environment."
+          content="Skin Inc is a South African based business owned by Stacey Lee Arends. We are an online unisex skincare and libido shop. Our products are made from organic plant based raw materials which are locally sourced. Good for your skin, Good for your libido, Good for the environment."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
