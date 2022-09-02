@@ -33,9 +33,9 @@ const Navbar = () => {
             <Link href="/">
               <a
                 className={
-                  router.asPath === '/'
-                    ? 'border-b-2 border-gray-700 text-white text-base'
-                    : 'text-white text-base'
+                  router.asPath === "/"
+                    ? "border-b-2 border-gray-700 text-white text-base"
+                    : "text-white text-base"
                 }
               >
                 Home
@@ -44,20 +44,20 @@ const Navbar = () => {
             <Link href="/about">
               <a
                 className={
-                  router.asPath === '/about'
-                    ? 'border-b-2 border-gray-700 text-white text-base'
-                    : 'text-white text-base'
+                  router.asPath === "/about"
+                    ? "border-b-2 border-gray-700 text-white text-base"
+                    : "text-white text-base"
                 }
               >
                 About Us
               </a>
-            </Link>{' '}
+            </Link>{" "}
             <Link href="/products">
               <a
                 className={
-                  router.asPath === '/products'
-                    ? 'border-b-2 border-gray-700 text-white text-base'
-                    : 'text-white text-base'
+                  router.asPath === "/products"
+                    ? "border-b-2 border-gray-700 text-white text-base"
+                    : "text-white text-base"
                 }
               >
                 Products
@@ -66,9 +66,9 @@ const Navbar = () => {
             <Link href="/contact">
               <a
                 className={
-                  router.asPath === '/contact'
-                    ? 'border-b-2 border-gray-700 text-white text-base'
-                    : 'text-white text-base'
+                  router.asPath === "/contact"
+                    ? "border-b-2 border-gray-700 text-white text-base"
+                    : "text-white text-base"
                 }
               >
                 Contact Us
@@ -111,14 +111,14 @@ const Navbar = () => {
           {show && (
             <div className="absolute top-20 right-10 transition duration-150 bg-sky-500 p-2 z-[1000]">
               <nav className="flex flex-col space-y-3 w-[200px]">
-                {' '}
+                {" "}
                 <Link href="/">
                   <a
                     onClick={() => setShow(false)}
                     className={
-                      router.asPath === '/'
-                        ? 'bg-sky-600 text-white text-base px-2 rounded hover:bg-sky-700'
-                        : 'text-white text-base px-2 rounded hover:bg-sky-700'
+                      router.asPath === "/"
+                        ? "bg-sky-600 text-white text-base px-2 rounded hover:bg-sky-700"
+                        : "text-white text-base px-2 rounded hover:bg-sky-700"
                     }
                   >
                     Home
@@ -128,33 +128,33 @@ const Navbar = () => {
                   <a
                     onClick={() => setShow(false)}
                     className={
-                      router.asPath === '/about'
-                        ? 'bg-sky-600 text-white text-base px-2 rounded hover:bg-sky-700'
-                        : 'text-white text-base px-2 rounded hover:bg-sky-700'
+                      router.asPath === "/about"
+                        ? "bg-sky-600 text-white text-base px-2 rounded hover:bg-sky-700"
+                        : "text-white text-base px-2 rounded hover:bg-sky-700"
                     }
                   >
                     About Us
                   </a>
-                </Link>{' '}
-                <Link href="/services">
+                </Link>{" "}
+                <Link href="/products">
                   <a
                     onClick={() => setShow(false)}
                     className={
-                      router.asPath === '/services'
-                        ? 'bg-sky-600 text-white text-base px-2 rounded hover:bg-sky-700'
-                        : 'text-white text-base px-2 rounded hover:bg-sky-700'
+                      router.asPath === "/products"
+                        ? "bg-sky-600 text-white text-base px-2 rounded hover:bg-sky-700"
+                        : "text-white text-base px-2 rounded hover:bg-sky-700"
                     }
                   >
-                    Services
+                    Products
                   </a>
                 </Link>
                 <Link href="/contact">
                   <a
                     onClick={() => setShow(false)}
                     className={
-                      router.asPath === '/contact'
-                        ? 'bg-sky-600 text-white text-base px-2 rounded hover:bg-sky-700'
-                        : 'text-white text-base px-2 rounded hover:bg-sky-700'
+                      router.asPath === "/contact"
+                        ? "bg-sky-600 text-white text-base px-2 rounded hover:bg-sky-700"
+                        : "text-white text-base px-2 rounded hover:bg-sky-700"
                     }
                   >
                     Contact Us
