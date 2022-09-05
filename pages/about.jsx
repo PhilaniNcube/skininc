@@ -22,7 +22,7 @@ const About = () => {
               journey started 2 years ago when I decided to investigate ways to
               amplify my quality of life, which spurred me into extensive
               research on formulating and manufacturing. This eventually led to
-              me developing my very own range of products. Trailing my products
+              me developing my very own range of products. Trialing my products
               with family, friends and colleagues produced remarkable results
               and this propelled me into the direction of starting my own
               business to share my findings. Long story short my cloud turned to
